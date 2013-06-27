@@ -1,0 +1,293 @@
+@mixin thumbnails_parent
+  &:after
+    clear: both
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+body
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+
+.modal-overlay
+  display: none
+  position: fixed
+  top: 0px
+  left: 0px
+  width: 100%
+  height: 100%
+  background: #000
+  opacity: 0
+  cursor: pointer
+
+
+.modal-dialog
+  display: none
+  position: fixed
+  bottom: 50%
+  left: 50%
+  width: 960px
+  height: 200px
+  margin-left: -490px
+  margin-bottom: -125px
+  background: #162127
+  border: 10px solid #c84a3c
+
+  .header
+    height: 30px
+    line-height: 30px
+    text-align: center
+    padding: 10px
+    font-size: 24px
+    background: #7bcbc8
+    color: #fff
+    letter-spacing: 1px
+
+  .body
+    padding: 50px
+
+
+    input
+      width: 265px
+      height: 30px
+      border: none
+      font-size: 16px
+      padding: 5px 15px
+      margin-right: 25px
+      border-radius: 3px
+
+    button
+      width: 185px
+      height: 40px
+      border: none
+      font-size: 16px
+      margin-right: 25px
+      border-radius: 3px
+      text-align: center
+      cursor: pointer
+      background: #eb6b4e
+      -webkit-transition: all 0.2s
+      color: #fff
+      &:hover
+        background: #7bcbc8
+
+
+.modal-thank-you
+  display: none
+  position: fixed
+  top: 50%
+  right: 50%
+  width: 400px
+  height: 200px
+  margin-top: -100px
+  margin-right: -200px
+  background: #162127
+  border: 10px solid #c84a3c
+
+  .header
+    height: 30px
+    line-height: 30px
+    text-align: center
+    padding: 10px
+    font-size: 24px
+    background: #7bcbc8
+    color: #fff
+    letter-spacing: 1px
+
+  .body
+    text-align: center
+    padding: 25px
+    color: #fff
+
+
+    button
+      margin: 40px auto
+      width: 185px
+      height: 40px
+      border: none
+      font-size: 16px
+      margin-right: 25px
+      border-radius: 3px
+      text-align: center
+      letter-spacing: 1px
+      cursor: pointer
+      background: #eb6b4e
+      -webkit-transition: all 0.2s
+      color: #fff
+      &:hover
+        background: #7bcbc8
+
+
+
+
+section
+  min-height: 500px
+  padding: 50px 0
+  position: relative
+
+  &.intro
+    background: #162127
+    min-height: 350px
+    height: 350px
+
+  &.about
+    background: #69c1a9
+    min-height: 440px
+    height: 440px
+
+  &.content-and-icons
+    background: #ef7c39
+    min-height: 425px
+    height: 425px
+
+  &.video
+    background: #7bcbc8
+
+  &.responsive
+    background: #c84a3c
+    min-height: 425px
+    height: 425px
+
+  &.portfolio
+    background: #eb6b4e
+    min-height: 400px
+    height: 400px
+
+  &.order
+    background: #162127
+    min-height: 200px
+
+.wrapper
+  width: 960px
+  margin: 0px auto
+
+
+.hello
+  margin-top: 75px
+  letter-spacing: 2px
+  font-size: 48px
+  font-weight: 200
+  line-height: 1.5
+  color: #fff
+  text-align: center
+
+
+h1
+  font-size: 48px
+  font-weight: 200
+  margin-bottom: 30px
+  letter-spacing: 2px
+  color: #fff
+
+
+h2
+  font-size: 32px
+  font-weight: 200
+  margin-bottom: 15px
+  color: #fff
+
+h6
+  color: #fff
+  opacity: 0.7
+  font-size: 16px
+  letter-spacing: 1px
+  line-height: 1.7
+  margin-bottom: 5px
+
+p
+  font-size: 16px
+  color: #eee
+  line-height: 1.7
+  margin: 20px 0
+
+
+.about
+  .imac
+    float: left
+    width: 534px
+    height: 436px
+    background: url('/assets/imac.png') no-repeat
+    background-size: cover
+  .content
+    float: right
+    width: 370px
+    height: 450px
+    padding-top: 15px
+    color: #fff
+
+
+.copyrighting
+  text-align: center
+  @include thumbnails_parent
+
+  .reason
+    margin-top: 75px
+    float: left
+    width: 440px
+    margin-right: 60px
+    text-align: left
+    &:nth-child(odd)
+      margin-right: 0px
+
+
+.video-block
+  width: 960px
+  height: 540px
+  margin: 25px auto
+  background: #000
+
+
+.responsive-block
+  .content
+    width: 415px
+    float: left
+    padding-top: 15px
+
+  .ipad
+    float: right
+    width: 500px
+    height: 430px
+    background: url('/assets/iphones.png') no-repeat
+    background-size: cover
+
+.result
+  .content
+    width: 415px
+    float: right
+    padding-top: 15px
+
+  .mackbook
+    float: left
+    width: 490px
+    height: 300px
+    background: url('/assets/mackbook.png') no-repeat
+    background-size: cover
+
+.order-block
+  text-align: center
+
+  .title
+    font-size: 54px
+    line-height: 1.5
+    color: #fff
+
+
+.order-button
+  width: 175px
+  height: 50px
+  line-height: 50px
+  text-align: center
+  color: #ffffff
+  letter-spacing: 1px
+  font-size: 16px
+  border-radius: 5px
+  cursor: pointer
+  margin: 50px auto
+  background: #eb6b4e
+  -webkit-transition: all 0.2s
+  &:hover
+    background: #7bcbc8
+
+  
