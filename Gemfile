@@ -16,4 +16,7 @@ end
 
 gem 'sqlite3'
 gem 'haml-rails'
-gem 'unicorn'
+gem 'kgio', '2.7.4'
+gem 'raindrops', '0.10.0'
+gem 'unicorn', '4.5.0'
+gem 'mysql2'
