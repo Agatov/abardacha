@@ -8,11 +8,13 @@ $ ->
       hide_order_form()
 
     show_order_form()
+    yaCounter21643645.reachGoal('order_call')
     false
 
   $('#send-order').bind 'click', ->
 
     $.post '/orders', {'order[username]': $('input[name=username]').val(), 'order[phone]': $('input[name=phone]').val()}, (data) =>
+      yaCounter21643645.reachGoal('add_contact')
       $('.modal-overlay').unbind 'click'
       $('.modal-overlay').bind 'click', ->
         hide_thank_you()
