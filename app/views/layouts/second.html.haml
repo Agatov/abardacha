@@ -1,0 +1,10 @@
+!!! 5
+%html
+  %head
+    = stylesheet_link_tag    'second', :media => 'all'
+    = csrf_meta_tags
+    = javascript_include_tag 'second'
+    %title
+      Landing Page за 5000 рублей.
+  %body
+    = yield
