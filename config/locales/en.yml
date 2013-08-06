@@ -4,6 +4,23 @@
 en:
   hello: "Hello world"
 
+  titles:
+    landing:
+      first: "лэндинг"
+      last: "лэндинга"
+    stranica_zahvata:
+      first: "страница захвата"
+      last: "страницы захвата"
+    posadochnaya_stranica:
+      first: "посадочная страница"
+      last: "посадочной страницы"
+    selling_page:
+      first: "продающая страница"
+      last: "продающей страницы"
+    target_page:
+      first: "целевая страница"
+      last: "целевой страницы"
+
   sms:
     notification_message: "%{username} : %{phone}. %{date}"
 
