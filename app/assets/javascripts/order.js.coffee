@@ -13,6 +13,20 @@ $ ->
 
   $('#send-order').bind 'click', ->
 
+    name = $(@).parent().find('input[name=username]')
+    if name.val().length < 2
+      name.css 'border', '1px solid red'
+      return false
+    else
+      name.css 'border', 'none'
+
+    phone = $(@).parent().find('input[name=phone]')
+    if phone.val().length < 7
+      phone.css 'border', '1px solid red'
+      return false
+    else
+      name.css 'border', 'none'
+
     $.post '/orders', {'order[username]': $('input[name=username]').val(), 'order[phone]': $('input[name=phone]').val()}, (data) =>
       yaCounter21643645.reachGoal('add_contact')
       $('.modal-overlay').unbind 'click'

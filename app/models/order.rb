@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
             password: 'avv6rqE',
             phone: '79037928959',
             text: sms_text,
-            sender_name: 'landing'
+            sender_name: 'abardacha'
         }
     )
 
