@@ -33,7 +33,7 @@ $ ->
       $('.modal-overlay').bind 'click', ->
         hide_thank_you()
 
-      show_thank_you()
+    show_thank_you()
 
     false
 
