@@ -17,20 +17,41 @@
 
 .wrapper.padding1
   .order-button
-    Заказать звонок
+    Хочу узнать прямо сейчас
 
 
 
 .modal-overlay
 .modal-dialog
   .header
-    Заказать звонок
+    Чтобы узнать, оставьте свои имя и телефон
   .body
-    %form{action: '#'}
-      %input{type: :text, name: :username, placeholder: 'Введите ваше имя'}
-      %input{type: :text, name: :phone, placeholder: 'Введите ваш телефон'}
-      %button#send-order
-        Заказать звонок
+
+    .left
+      .content
+        %h5
+          Оставив заявку, вы узнаете:
+        -#%p
+          Что самое интересное, вся суть страницы захвата сводится к тому,
+          чтобы вы заполнили форму справа и нажали оранжевую кнопку.
+        %p
+
+          &#151; Почему страница захвата не стоит 30 000 рублей
+          %br
+          &#151; Про закон релевантности в интернет-маркетинге
+          %br
+          &#151; Про технику "пять-пять"
+          %br
+          %br
+          А также получите консультацию маркетолога
+
+
+    .right
+      %form{action: '#'}
+        %input{type: :text, name: :username, placeholder: 'Введите ваше имя'}
+        %input{type: :text, name: :phone, placeholder: 'Введите ваш телефон'}
+        %button#send-order
+          Хочу узнать
 
 .modal-thank-you
   .header
