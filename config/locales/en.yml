@@ -22,7 +22,7 @@ en:
       last: "целевой страницы"
 
   sms:
-    notification_message: "%{username} : %{phone}. %{date}"
+    notification_message: "%{username} : %{phone}"
 
   time:
     formats:

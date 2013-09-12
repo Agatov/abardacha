@@ -27,8 +27,7 @@ class Order < ActiveRecord::Base
     I18n.translate(
         'sms.notification_message',
         username: username,
-        phone: phone,
-        date: created_at.strftime('%d %b, %H:%M')
+        phone: phone
     )
   end
 end
