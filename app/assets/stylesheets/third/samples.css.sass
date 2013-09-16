@@ -1,0 +1,29 @@
+.samples
+  padding: 50px 0
+
+  .samples-title
+    text-align: center
+
+
+  .samples-container
+    margin: 50px 0
+    &:after
+      clear: both
+      content: "."
+      display: block
+      height: 0
+      clear: both
+      visibility: hidden
+    .sample
+      background: #fff
+      border: 1px solid #ddd
+      padding: 5px
+      width: 300px
+      float: left
+      margin-right: 10px
+      &:nth-child(3n)
+        margin-right: 0px
+
+
+      img
+        width: 300px
