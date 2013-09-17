@@ -24,6 +24,18 @@ class Order < ActiveRecord::Base
     end
   end
 
+  def send_to_crm
+    HTTParty.post(
+      'http://crm.abardacha.ru/api/clients',
+      query: {
+          client: {
+              name: username,
+              phone: phone
+          }
+      }
+    )
+  end
+
   def sms_text
     I18n.translate(
         'sms.notification_message',
