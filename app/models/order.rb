@@ -2,6 +2,7 @@ class Order < ActiveRecord::Base
   attr_accessible :email, :phone, :username
 
   after_create :send_notification
+  after_create :send_to_crm
 
   def send_notification
     response = HTTParty.get(

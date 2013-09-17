@@ -28,7 +28,7 @@ $ ->
     else
       name.css 'border', 'none'
 
-    $.post '/orders', {'order[username]': $('input[name=username]').val(), 'order[phone]': $('input[name=phone]').val()}, (data) =>
+    $.post '/orders', {'order[username]': name.val(), 'order[phone]': phone.val()}, (data) =>
       yaCounter21643645.reachGoal('add_contact')
       $('.modal-overlay').unbind 'click'
       $('.modal-overlay').bind 'click', ->

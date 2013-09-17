@@ -11,9 +11,10 @@ $ ->
     yaCounter21643645.reachGoal('order_call')
     false
 
-  $('#send-order').bind 'click', ->
+  $('.send-order').bind 'click', ->
 
     name = $(@).parent().find('input[name=username]')
+
     if name.val().length < 2
       name.css 'border', '1px solid red'
       return false
