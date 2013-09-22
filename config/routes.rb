@@ -1,5 +1,5 @@
 Abardacha::Application.routes.draw do
-  root to: 'third_version#index'
+  root to: 'second_version#index'
 
   resources :orders, only: :create
 end

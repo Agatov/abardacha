@@ -1,18 +1,18 @@
 .wrapper.padding2
   .title
-    Узнайте почему
+    Узнайте в каком случае
     = @first_word
-    за
     %br
-    %span.light 5 000 рублей
-    эффективнее
+    за
+    %span.light 3 000 рублей
+    будет эффективнее
     = @last_word
     за 30 000 рублей.
 
 .wrapper.padding1
   .phone
     8 (495) 792 89 59
-    .small Работаем по всей России
+    -#.small Работаем по всей России
 
 
 .wrapper.padding1
@@ -24,33 +24,12 @@
 .modal-overlay
 .modal-dialog
   .header
-    Чтобы узнать, оставьте свои имя и телефон
+    Не оставив свои контактные данные, вы никогда об этом не узнаете.
   .body
-
-    .left
-      .content
-        %h5
-          Мы делаем страницы захвата:
-        %p
-
-          &#151; Цена одной страницы - 5 000 рублей.
-          %br
-          &#151; Ваша страница будет готова через 24 часа.
-          %br
-          &#151; Домен и хостинг - в подарок!
-          %br
-          %br
-          Ну и конечно, оставив заявку, вы узнаете, почему не нужно платить
-          %br
-          за страницу захвата 30 000 рублей.
-
-
-    .right
-      %form{action: '#'}
-        %input{type: :text, name: :username, placeholder: 'Введите ваше имя'}
-        %input{type: :text, name: :phone, placeholder: 'Введите ваш телефон'}
-        %button#send-order
-          Хочу узнать
+    %input{type: :text, name: :username, placeholder: 'Введите ваше имя'}
+    %input{type: :text, name: :phone, placeholder: 'Введите ваш телефон'}
+    %button#send-order
+      Хочу узнать
 
 .modal-thank-you
   .header
