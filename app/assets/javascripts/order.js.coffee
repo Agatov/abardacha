@@ -11,7 +11,7 @@ $ ->
     yaCounter22346590.reachGoal('order_call')
     false
 
-  $('.send-order').bind 'click', ->
+  $('#send-order').bind 'click', ->
 
     name = $(@).parent().find('input[name=username]')
 
