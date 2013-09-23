@@ -1,8 +1,21 @@
+
+@font-face
+  font-family: 'ProximaNovaCond-Bold'
+  src: url('/assets/ProximaNovaCond-Bold.otf') format("opentype")
+  font-weight: normal
+  font-style: normal
+
 body
   margin: 0px
   padding: 0px
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
-  background: #162127
+
+
+#intro
+  background: #2f3238 url('/assets/header-bg.jpg') no-repeat 50% 0
+  background-size: 100%
+  min-width: 1020px
+  height: 100%
 
 
 .wrapper
@@ -26,13 +39,20 @@ body
 
   &.padding6
     padding: 150px 0
+    padding-bottom: 50px
+
+  &.padding8
+    padding-top: 175px
+    padding-bottom: 25px
 
 
 .title
   font-size: 48px
-  line-height: 1.5
+  line-height: 1.2
+  letter-spacing: 1px
   color: #fff
   text-align: center
+  font-family: 'ProximaNovaCond-Bold'
 
 
   .light
@@ -47,6 +67,7 @@ body
 .phone
   text-align: center
   font-size: 48px
+  font-family: 'ProximaNovaCond-Bold'
   color: #fff
 
   .small
@@ -54,9 +75,9 @@ body
     font-size: 24px
 
 .order-button
-  width: 250px
-  height: 50px
-  line-height: 50px
+  width: 366px
+  height: 66px
+  line-height: 66px
   text-align: center
   color: #ffffff
   letter-spacing: 1px
@@ -64,7 +85,12 @@ body
   border-radius: 5px
   cursor: pointer
   margin: 50px auto
-  background: #eb6b4e
+  background: #3fc380
+  font-family: 'ProximaNovaCond-Bold'
+  font-size: 24px
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.3)
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.3)
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.3)
   -webkit-transition: all 0.2s
   &:hover
-    background: #7bcbc8
+    background: #f25e4f
