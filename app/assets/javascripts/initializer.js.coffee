@@ -1,11 +1,12 @@
 $ ->
 
-  setIntroHeight()
+  $('.feature-case').bind 'mouseover', ->
+    $('.feature-case').removeClass('active')
+    $(@).addClass('active')
 
-  $(window).resize ->
-    setIntroHeight()
+    $('.feature-image').removeClass('active')
+    $(".feature-image[rel=#{$(@).attr('target')}").addClass('active')
 
 
-
-setIntroHeight = ->
-  $('#intro').css('height', "#{$(document).height()}px")
+  $('#first-button').bind 'click', ->
+    $("body").animate({ scrollTop: $('.last-offer').offset().top }, "slow")
