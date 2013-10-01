@@ -28,7 +28,7 @@ $ ->
 
     window.show_thank_you()
 
-#    yaCounter22231843.reachGoal('new_order')
+    yaCounter22231843.reachGoal('new_order')
 
     false
 
