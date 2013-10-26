@@ -3,3 +3,4 @@
 //= require initializer
 //= require google_maps
 //= require order
+//= require video
