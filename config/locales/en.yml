@@ -27,3 +27,7 @@ en:
   time:
     formats:
       dayMonth: "%d %B"
+
+  email:
+    title: Новая заявка на abardacha.ru
+
