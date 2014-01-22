@@ -39,7 +39,8 @@
     .features
       .feature.feature-case.active{target: 'case-marketube'}
         %h3
-          Marketube.ru
+          %a{href: 'http://marketube.ru/', target: '_blank'}
+            Marketube
 
         %p
           Страница захвата наших партнеров, занимающихся съемкой продающих видеороликов.
@@ -47,7 +48,8 @@
 
       .feature.feature-case.centered{target: 'case-mimicase'}
         %h3
-          Corp.Mimicase.com
+          %a{href: 'http://mimicase.cases.abardacha.ru/', target: '_blank'}
+            Mimicase
 
         %p
           Страница захвата для компании, продающей чехлы для телефонов в корпоративном стиле.
@@ -55,20 +57,24 @@
 
       .feature.feature-case.last{target: 'case-tastell'}
         %h3
-          Montale.tastell.ru
+          %a{href: 'http://montale.cases.abardacha.ru/', target: '_blank'}
+            Продажа духов Montale
 
         %p
           Страница захвата для магазина нишевой эксклюзивной парфюмерии.
 
     .feature-images
       .feature-image.active{rel: 'case-marketube'}
-        = image_tag 'case1.png'
+        %a{href: 'http://marketube.ru/', target: '_blank'}
+          = image_tag 'case1.png'
 
       .feature-image{rel: 'case-mimicase'}
-        = image_tag 'case2.png'
+        %a{href: 'http://mimicase.cases.abardacha.ru/', target: '_blank'}
+          = image_tag 'case2.png'
 
       .feature-image{rel: 'case-tastell'}
-        = image_tag 'case3.png'
+        %a{href: 'http://montale.cases.abardacha.ru/', target: '_blank'}
+          = image_tag 'case3.png'
 
 
 %section
