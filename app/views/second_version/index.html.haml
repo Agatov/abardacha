@@ -13,8 +13,13 @@
     .order-button#first-button
       Хочу узнать прямо сейчас
 
-= render partial: 'second_version/first_action'
-= render partial: 'second_version/about_video'
+
+- if params[:promo] == 'special_action'
+  = render partial: 'second_version/region_promo'
+
+- else
+  = render partial: 'second_version/first_action'
+  = render partial: 'second_version/about_video'
 
 
 
