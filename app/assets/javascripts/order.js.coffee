@@ -19,22 +19,54 @@ $ ->
 
     $.post '/orders', {'order[username]': name.val(), 'order[phone]': phone.val()}, (data) =>
 
-    $('.form-body').hide()
-    $('.form-success').show()
+    parent_form = $(@).parent()
+
+    if parent_form.attr('type') == 'modal-form'
+      hide_modal_form(true)
+      show_thank_you()
+    else
+      window.show_thank_you_with_overlay()
 
 
     name.val('')
     phone.val('')
-
-    window.show_thank_you()
 
     yaCounter22346590.reachGoal('new_order')
 
     false
 
 
-window.show_thank_you = ->
+  $('#first-button').on 'click', ->
 
+    $('.modal-overlay').unbind 'click'
+    $('.modal-overlay').on 'click', ->
+      hide_modal_form()
+
+    show_modal_form()
+
+
+
+window.show_modal_form = ->
+  $('.modal-overlay').show()
+  $('.modal-overlay').animate({'opacity': '0.8'}, 300, ->
+
+    $('.modal-dialog').css('right', '-500px')
+    $('.modal-dialog').css('top', '50%')
+    $('.modal-dialog').show()
+#    $('.modal-dialog').animate {'right': '50%'}, 500
+  )
+
+window.hide_modal_form = (with_overlay = false) ->
+  $('.modal-dialog').animate {'top': '-2000px'}, 300, ->
+    $('.modal-dialog').hide()
+
+    unless with_overlay
+      $('.modal-overlay').animate {'opacity': '0'}, 100, ->
+      $('.modal-overlay').hide()
+
+
+# @todo - отрефакторить этот ужас
+window.show_thank_you_with_overlay = ->
 
   $('.modal-overlay').show()
   $('.modal-overlay').animate({'opacity': '0.8'}, 300, ->
@@ -47,8 +79,14 @@ window.show_thank_you = ->
     $('.modal-overlay').bind 'click', ->
       window.hide_thank_you()
 
-
   )
+
+window.show_thank_you = ->
+  $('.modal-thank-you').css('right', '-500px')
+  $('.modal-thank-you').css('top', '50%')
+  $('.modal-thank-you').show()
+  $('.modal-thank-you').animate {'right': '50%'}, 500
+
 
 window.hide_thank_you = ->
 

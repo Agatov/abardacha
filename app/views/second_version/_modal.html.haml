@@ -8,10 +8,10 @@
 
 
     .right
-      .form
+      .form{type: 'modal-form', tag: 'sometag'}
         %input{type: :text, name: :username, placeholder: 'Введите ваше имя'}
         %input{type: :text, name: :phone, placeholder: 'Введите ваш телефон'}
-        %button#send-order
+        %button.send-order
           Хочу узнать
 
 .modal-thank-you
